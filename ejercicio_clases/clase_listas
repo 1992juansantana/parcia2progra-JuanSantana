@@ -1,0 +1,104 @@
+#1-Escribir una función que reciba una lista de enteros, la misma calculará y 
+# devolverá el promedio de todos los números.
+
+
+# def promediando(lista):
+#     acumulador_notas = 0
+    
+#     for i in range(len(lista)):
+#         acumulador_notas += lista[i]
+#     promedio = (acumulador_notas / 3)
+        
+#     return promedio
+
+# print(promediando([7,8,9]))
+
+# 2-Escribir una función parecida a la anterior, pero la misma deberá calcular y 
+# devolver el promedio de los números positivos.
+
+
+# def promediando(lista):
+    
+#         acumulador_notas = 0
+#         contador_positivos= 0
+    
+        
+#         for i in range(len(lista)):
+#             if lista[i] > 0:
+#                 contador_positivos += 1
+#                 acumulador_notas += lista[i]
+    
+#         promedio = (acumulador_notas / contador_positivos)
+            
+#         return promedio
+
+# print(promediando([7,8,9,-5,-10]))
+
+# 3-Escribir una función que calcule y retorne el producto de todos los elementos 
+# de la lista que recibe como parámetro.
+
+# def calculando (lista):
+    
+#     acumulador_elementos = 1
+    
+#     for i in range(len(lista)):
+#         acumulador_elementos *= lista[i]
+    
+#     return acumulador_elementos
+    
+
+# print (calculando([7,8,9]))
+ 
+
+
+
+
+# 4-Escribir una función que reciba como parámetros una lista de enteros y 
+# retorne la posición del valor máximo encontrado.
+
+
+def buscando(lista):
+    
+    mayor_numero = None
+    posicion_mayor_numero = 0
+    
+    for i in range(len(lista)):
+        if mayor_numero == None or lista[i] > lista[posicion_mayor_numero]:
+            mayor_numero = lista[i]
+            posicion_mayor_numero = i
+                        
+    return posicion_mayor_numero
+    
+    
+    
+print(buscando([7,8,9]))
+
+
+
+
+
+
+
+
+# 5-Escribir una función que reciba como parámetros una lista de enteros y 
+# muestre la/las posiciones en donde se encuentra el valor máximo hallado
+
+
+
+
+
+
+
+
+# 6-Escribir una función llamada reemplazar_nombres que reciba como parámetros 
+# una lista de nombres, un nombre a reemplazar y su correspondiente reemplazo. 
+# La función debe reemplazar cada ocurrencia del nombre a reemplazar en la lista 
+# con su correspondiente reemplazo y luego retornar la cantidad total de 
+# reemplazos realizados.
+
+
+def reemplazar_nombres (mariano,lucas,juan):
+    
+    
+    
+

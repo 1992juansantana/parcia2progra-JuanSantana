@@ -1,0 +1,87 @@
+
+#  Crear una función que permita determinar si un número es par o no.
+# La función retorna true en caso afirmativo y false en caso contrario.
+
+
+# def numero_par(numero):
+
+#     return numero % 2 == 0
+
+# print(numero_par(1))
+# print(numero_par(2))
+# print(numero_par(3))
+# print(numero_par(4))
+# print(numero_par(5))
+
+
+# Crear una función que calcule el resultado de la potencia entre dos numeros
+# recibidos por parametro y lo retorne. Validar que el exponente no sea negativo
+
+
+# def potencia (base, exponente):
+    
+#     if exponente < 0 :
+#         print("no ingresar numero menor de 0")
+        
+#     else:
+#         return base ** exponente
+    
+# print(potencia(2, 3))
+# print(potencia(10, -2))
+
+# Crear una función que pida el ingreso de un numero. Validar que dicho ingreso
+# sea un numero antes de retornarlo. En caso afirmativo, retornar el numero,
+# caso contrario retornar None
+
+# def obtener_numero():
+#     entrada = input("Por favor, ingrese un número: ")
+#     try:
+#         numero = float(entrada)
+#         return numero
+#     except ValueError:
+#         return None
+
+# # Ejemplos de uso
+# print(obtener_numero())  # Prueba ingresando diferentes valores
+
+# Realizar un programa en donde se puedan utilizar los prototipos de la función
+# Sumar en sus 4 combinaciones.
+# sumar1(int, int) -> int;
+# sumar2() -> int;
+# sumar3(int, int) -> None;
+# sumar4() -> None;
+
+# Escribe funciones para calcular el área las siguientes figuras geométricas:
+# Circulo
+# Rectangulo
+# Cuadrado
+# Triangulo rectangulo
+
+
+def numero1(numero):
+    return numero + 1
+
+def numero2(numero):
+    return numero / 2
+
+resul1 = numero1(2)
+resul2 = numero2(2)
+print(resul2)
+
+        
+
+
+
+
+
+
+    
+
+
+
+    
+    
+
+
+
+

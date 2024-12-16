@@ -1,18 +1,13 @@
+import os
 
-
+# Tamaño de la pantalla
 PANTALLA_TAMAÑO = (800, 600)
 
-
-ANCHO_PERSONAJE = 20
-ALTO_PERSONAJE = 20
-
-ANCHO_METEORITO = 30
-ALTO_METEORITO = 30
-
-COLOR_AMARILLO = (255, 255, 0)
-COLOR_BLANCO = (255, 255, 255)
+# Colores
 COLOR_NEGRO = (0, 0, 0)
-COLOR_ROJO = (255, 0, 0)
+COLOR_CELESTE = (0, 0, 128)
 
-FPS = 60
-VELOCIDAD = 5
+# Coordenadas iniciales de la nave
+coordenada_nave = [300, 500]
+
+

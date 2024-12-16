@@ -1,0 +1,38 @@
+# def factorial(numero):
+#     fact = 0
+#     for i in range(1, numero + 1):
+#         fact = fact + i
+#     return fact
+
+
+
+# def factorial_recur(numero):
+    
+#     if numero == 0:
+#            return 0
+#     else:
+#         return factorial_recur(numero -1) + numero
+
+# print(factorial(66))
+# print(factorial_recur(5))  
+
+
+#1-Escribir una función que reciba una lista de enteros, la misma calculará y 
+# devolverá el promedio de todos los números.
+
+
+def calculo(lista):
+    cantidad_de_notas = 0
+    
+    for i in range(len(lista)):
+        cantidad_de_notas += 1
+        
+        
+            
+
+
+
+        
+
+
+

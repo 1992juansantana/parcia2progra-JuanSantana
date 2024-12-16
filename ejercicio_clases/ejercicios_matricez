@@ -1,0 +1,259 @@
+# Realizar una funcion que cree una matriz de NxM cantidad de filas y columnas
+def crear_matriz (filas, columnas,valor_inicial):
+    retorno = []
+    
+    for f in range(filas):
+        lista = [valor_inicial]*columnas
+        retorno += [lista]
+        
+    return retorno
+
+
+print(crear_matriz(3, 3, 10))
+
+# Realizar una funcion que cree una matriz identidad de N cantidad de filas y 
+# columnas
+
+
+def crear_identidad (N):
+    retorno = []
+    
+    for i in range (N): #llenar la matriz con filas llenas de 0
+        filas = [0]*N
+        retorno += [filas]
+    
+    for i in range(N): # asignar valores 1 en una diagonal
+        retorno [i][i] = 1
+
+    return retorno
+                
+        
+
+N = 4
+matriz = crear_identidad(N)
+for fila in matriz:
+    
+    print (fila)
+    
+    
+# Realizar una funcion que calcule la suma de todos los elementos de una matriz
+
+def sumar_matriz2(matriz):
+    
+    suma = 0
+    
+    for filas in matriz:
+        for elemento in filas:
+            suma += elemento
+        
+    return suma
+
+matriz = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+]
+
+
+resultado = sumar_matriz2(matriz)
+
+print(f"suma de los elementos de la fila: ", resultado )
+
+
+# Realizar una funcion que calcule la suma de todos los elementos de 
+# una fila perteneciente a una matriz
+
+
+def sumar_matriz1(matriz, filas):
+    
+    suma = 0
+    
+    
+    for elemento in matriz[filas]:
+        suma += elemento
+        
+    return suma
+
+matriz = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+]
+
+filas = 0
+resultado = sumar_matriz1(matriz, filas )
+
+print(f"suma de los elementos de la fila{filas}: ", resultado )
+
+
+
+# Realizar una funcion que calcule la suma de todos los elementos de 
+# una columna perteneciente a una matriz
+
+
+def sumar_matriz(matriz, columnas):
+    
+    suma = 0
+    
+    
+    for filas in matriz:
+        suma += filas[columnas]
+        
+    return suma
+
+matriz = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+]
+
+columnas = 2
+resultado = sumar_matriz(matriz, columnas)
+
+print(f"suma de los elementos de la columnas{columnas}: ", resultado )
+
+
+# Realizar una funcion que calcule la suma de dos matrices
+
+
+def sumar_matrice2(matriz1, matriz2):
+    suma = matriz1 
+    N = len(matriz1)
+    M = len(matriz1[0])
+    
+    for i in range(N):
+        for j in range(M):
+            suma [i][j] = matriz1 [i][j] + matriz2 [i][j]
+    return suma
+    
+    
+matriz1 = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+]
+
+matriz2 = [
+    [9,8,7],
+    [5,3,1],
+    [9,8,2]
+]
+
+resultado = sumar_matrice2(matriz1, matriz2)
+
+for filas in resultado:
+    print(filas)
+
+
+# Realizar una funcion que calcule el producto entre una matriz y un escalar
+
+
+def sumar_matrice1(matriz1, escalar):
+    suma = matriz1 
+    N = len(matriz1)
+    M = len(matriz1[0])
+    
+    for i in range(N):
+        for j in range(M):
+            suma [i][j] = matriz1 [i][j] * escalar
+    return suma
+    
+    
+matriz1 = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+]
+
+escalar = 3
+resultado = sumar_matrice1(matriz1, escalar)
+print()
+for filas in resultado:
+    print(filas)
+
+
+
+# Realizar una funcion que calcule el producto entre dos matrices
+
+
+def sumar_matrice(matriz1, matriz2):
+    suma = matriz1 
+    N = len(matriz1)
+    M = len(matriz1[0])
+    
+    for i in range(N):
+        for j in range(M):
+            suma [i][j] = matriz1 [i][j] * matriz2 [i][j]
+    return suma
+    
+    
+matriz1 = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+]
+
+matriz2 = [
+    [9,8,7],
+    [5,3,1],
+    [9,8,2]
+]
+
+resultado = sumar_matrice(matriz1, matriz2)
+print()
+for filas in resultado:
+    print(filas)
+    
+    
+# Un cuadrado mágico es una matriz cuadrada en la que la suma de los 
+# números en cada fila, cada columna y cada diagonal principal es la misma. 
+# Esto se conoce como constante mágica del cuadrado.La misma se calcula: 
+
+# M = n*(n2 + 1)/2
+
+
+def cuadrado_magico(matriz):
+    
+    N = len(matriz)
+    M = N*(N**2 + 1)//2 
+    
+    for filas in matriz:
+        if sum(filas) != M:
+            return False
+        
+    for j in range(N):
+        suma = 0
+        for i in range(N):
+            suma += matriz [i][j]
+        if suma != M:
+            return False
+        
+    suma_principal = 0
+
+    for i in range(N):
+          suma_principal += matriz[i][i]
+    
+    if suma_principal != M:
+        return False
+    
+    suma_secundaria = 0
+    
+    for i in range (N):
+        suma_secundaria += matriz [i][N-i - 1]
+        
+    if suma_secundaria != M:
+        return False
+    
+    return True
+
+matriz_magica = [
+    [2,7,6],
+    [9,5,1],
+    [4,3,8]
+]
+
+if cuadrado_magico(matriz_magica):
+    print("ES UNA MATRIZ MAGICA")
+    
+else:
+    print("NO ES UNA MATRIZ")
